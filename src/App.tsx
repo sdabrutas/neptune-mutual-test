@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Converter from './components/Converter';
 
-function App() {
+
+const MainContainer = styled.div`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+`;
+
+const ConverterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 360px;
+  width: 540px;
+  border-radius: 6px;
+`;
+
+const WalletDetails = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+`;
+
+const WalletDetailsBtn = styled.button`
+  background: transparent;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #c9a228;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <ConverterContainer>
+        <Converter />
+        <WalletDetails>
+          <WalletDetailsBtn>Check Wallet Details</WalletDetailsBtn>
+        </WalletDetails>
+      </ConverterContainer>
+    </MainContainer>
   );
-}
+};
 
 export default App;

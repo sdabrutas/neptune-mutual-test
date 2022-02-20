@@ -1,6 +1,9 @@
+import { useState } from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import Converter from './components/Converter';
 
+import Converter from './components/Converter';
+import WalletDetailsModal from './components/WalletDetailsModal';
 
 const MainContainer = styled.div`
   background-color: #282c34;
@@ -41,14 +44,22 @@ const WalletDetailsBtn = styled.button`
 `;
 
 const App = () => {
+  const [isWalletPopupShown, setWalletPopupDisplay] = useState(false);
   return (
     <MainContainer>
+      <h1>Crypto Converter</h1>
       <ConverterContainer>
         <Converter />
         <WalletDetails>
-          <WalletDetailsBtn>Check Wallet Details</WalletDetailsBtn>
+          <WalletDetailsBtn type="button" onClick={():void => setWalletPopupDisplay(true)}>Check Wallet Details</WalletDetailsBtn>
         </WalletDetails>
       </ConverterContainer>
+      {ReactDOM.createPortal(
+        <WalletDetailsModal
+          isModalShown={isWalletPopupShown}
+          closeModal={():void => setWalletPopupDisplay(false)}
+        />
+      , (document.getElementById('modal-root') as Element))}
     </MainContainer>
   );
 };

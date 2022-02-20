@@ -40,14 +40,13 @@ const Input = styled.input`
   font-weight: lighter;
   color: #656565;
   overflow: hidden;
+  text-align: center;
 
   &:first-child {
     border-right: 1px solid #eee;
-    text-align: left;
   }
   &:last-child {
     border-left: 1px solid #eee;
-    text-align: right;
   }
 `;
 

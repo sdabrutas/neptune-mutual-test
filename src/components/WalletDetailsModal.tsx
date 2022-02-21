@@ -63,13 +63,29 @@ const ConnectButton = styled.button`
   color: #fff;
   cursor: pointer;
   margin-top: 15px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 const DisconnectButton = styled(ConnectButton)`
   background: #dc3545;
 `;
 
-const { useChainId, useAccounts, useIsActivating, useIsActive, useProvider, useENSNames } = hooks;
+const ErrorMessage = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  background: #f8d7da;
+  border: 1px solid #f5c2c7;
+  border-radius: 5px;
+  color: #842029;
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 12px;
+`;
+
+const { useChainId, useAccounts, useError, useIsActivating, useIsActive, useProvider, useENSNames } = hooks;
 
 const WalletDetailsModal = ({
   isModalShown,
@@ -81,6 +97,7 @@ const WalletDetailsModal = ({
   const accounts = useAccounts();
   const ENSNames = useENSNames(provider);
   const isActivating = useIsActivating();
+  const error = useError();
 
   return (
     <MainContainer isModalShown={isModalShown}>
@@ -90,6 +107,7 @@ const WalletDetailsModal = ({
           <span onClick={():void => closeModal()}>x</span>
         </ModalHeader>
         <ModalBody>
+          {error && <ErrorMessage>{error.name ?? 'Error'}: {error.message}</ErrorMessage>}
           {isActive ? (
             <>
               <AccountsTable provider={provider} accounts={accounts} ENSNames={ENSNames} chainId={chainId} />

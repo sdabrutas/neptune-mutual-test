@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/neptune-mutual-test/static/css/main.e52a0239.css",
-    "main.js": "/neptune-mutual-test/static/js/main.9fe83e37.js",
+    "main.js": "/neptune-mutual-test/static/js/main.37437621.js",
     "static/js/36.b1f6a63f.chunk.js": "/neptune-mutual-test/static/js/36.b1f6a63f.chunk.js",
     "static/js/226.189f1449.chunk.js": "/neptune-mutual-test/static/js/226.189f1449.chunk.js",
     "static/js/787.fcefe742.chunk.js": "/neptune-mutual-test/static/js/787.fcefe742.chunk.js",
     "static/media/CourierPrime-Regular.ttf": "/neptune-mutual-test/static/media/CourierPrime-Regular.7503a2e9660bb6f608fb.ttf",
-    "static/media/convert-icon.svg": "/neptune-mutual-test/static/media/convert-icon.f5041b590bb3fc9b0a4225038cce082a.svg",
+    "static/media/convert-icon.svg": "/neptune-mutual-test/static/media/convert-icon.d6721c52cd21f1bd561441ee1c936b9b.svg",
     "index.html": "/neptune-mutual-test/index.html",
     "main.e52a0239.css.map": "/neptune-mutual-test/static/css/main.e52a0239.css.map",
-    "main.9fe83e37.js.map": "/neptune-mutual-test/static/js/main.9fe83e37.js.map",
+    "main.37437621.js.map": "/neptune-mutual-test/static/js/main.37437621.js.map",
     "36.b1f6a63f.chunk.js.map": "/neptune-mutual-test/static/js/36.b1f6a63f.chunk.js.map",
     "226.189f1449.chunk.js.map": "/neptune-mutual-test/static/js/226.189f1449.chunk.js.map",
     "787.fcefe742.chunk.js.map": "/neptune-mutual-test/static/js/787.fcefe742.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e52a0239.css",
-    "static/js/main.9fe83e37.js"
+    "static/js/main.37437621.js"
   ]
 }
